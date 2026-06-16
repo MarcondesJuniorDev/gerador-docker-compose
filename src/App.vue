@@ -10,7 +10,7 @@ const store = useDockerStore()
 onMounted(() => {
   try {
     (window.adsbygoogle = window.adsbygoogle || []).push({})
-  } catch (e) {
+  } catch {
     // Silencia erros em ambiente de desenvolvimento local
   }
 })

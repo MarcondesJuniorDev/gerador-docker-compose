@@ -4,12 +4,14 @@ import { ref, computed, watch } from 'vue'
 export const useDockerStore = defineStore('docker', () => {
   // Estado
   const services = ref([])
+  const currentTab = ref('select')
 
   // Recupera do localStorage na inicialização
   const savedServices = localStorage.getItem('compose_builder_services')
   if (savedServices) {
     try {
       services.value = JSON.parse(savedServices)
+      currentTab.value = services.value.length > 0 ? 'config' : 'select'
     } catch (e) {
       console.error('Falha ao restaurar serviços do localStorage:', e)
     }
@@ -361,6 +363,7 @@ export const useDockerStore = defineStore('docker', () => {
       preset.services.forEach((type) => {
         addService(type)
       })
+      currentTab.value = 'config'
     }, 50)
   }
 
@@ -438,6 +441,7 @@ export const useDockerStore = defineStore('docker', () => {
     services,
     categories,
     presets,
+    currentTab,
     addService,
     removeService,
     updateService,

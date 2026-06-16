@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <aside class="w-80 bg-slate-900 border-r border-slate-800 text-slate-100 flex flex-col h-full overflow-hidden">
+  <aside class="w-full bg-slate-900 text-slate-100 flex flex-col h-full overflow-hidden">
     <!-- Header -->
     <div class="p-6 border-b border-slate-800 bg-slate-950/50">
       <div class="flex items-center gap-3">
@@ -92,6 +92,16 @@ onMounted(() => {
         </div>
       </div>
 
+    </div>
+
+    <!-- Botão de Ação Mobile para Configuração -->
+    <div v-if="store.services.length > 0" class="px-5 pb-4 md:hidden shrink-0">
+      <button
+        @click="store.currentTab = 'config'"
+        class="w-full bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/25 transition-all duration-200"
+      >
+        🛠️ Configurar Stack ({{ store.services.length }}) ➔
+      </button>
     </div>
 
     <!-- Espaço AdSense Sidebar (Vertical/Quadrado) -->

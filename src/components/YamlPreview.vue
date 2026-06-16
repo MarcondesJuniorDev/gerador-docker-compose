@@ -31,7 +31,7 @@ const downloadYaml = () => {
 </script>
 
 <template>
-  <div class="flex flex-col bg-slate-950 border-l border-slate-800 h-full">
+  <div class="flex flex-col bg-slate-950 h-full">
     <!-- Header do Editor -->
     <div class="flex items-center justify-between px-6 py-4 bg-slate-900 border-b border-slate-800">
       <div class="flex items-center gap-2.5">

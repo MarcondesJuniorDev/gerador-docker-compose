@@ -105,10 +105,15 @@ const store = useDockerStore()
     </div>
 
     <!-- Footer / SEO / Info -->
-    <div class="p-3 border-t border-slate-800/40 bg-slate-950/20 text-center">
+    <div class="p-3 border-t border-slate-800/40 bg-slate-950/20 text-center flex flex-col gap-1">
       <p class="text-[9px] text-slate-600">
         Gerador open-source • 100% Estático
       </p>
+      <div class="flex items-center justify-center gap-2 text-[9px] text-slate-500">
+        <a href="/politica-de-privacidade.html" target="_blank" class="hover:text-indigo-400 transition-colors">Privacidade</a>
+        <span>•</span>
+        <a href="/termos-de-uso.html" target="_blank" class="hover:text-indigo-400 transition-colors">Termos de Uso</a>
+      </div>
     </div>
   </aside>
 </template>

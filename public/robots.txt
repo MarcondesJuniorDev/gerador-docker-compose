@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Substitua pela URL do seu domínio personalizado quando configurado na Cloudflare
+Sitemap: https://gerador-docker-compose.pages.dev/sitemap.xml

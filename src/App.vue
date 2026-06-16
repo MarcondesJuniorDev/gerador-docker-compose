@@ -43,7 +43,7 @@ const clearAll = () => {
       :class="[
         store.currentTab === 'select' ? 'flex flex-1' : 'hidden md:flex',
         isSidebarOpen ? 'w-full md:w-80 opacity-100' : 'md:w-0 md:opacity-0 md:pointer-events-none md:border-r-0',
-        'md:shrink-0 md:border-r md:border-slate-800 transition-all duration-300 ease-in-out'
+        'md:flex-none md:shrink-0 md:border-r md:border-slate-800 transition-all duration-300 ease-in-out overflow-hidden'
       ]"
     />
 
@@ -51,7 +51,7 @@ const clearAll = () => {
     <main
       :class="[
         store.currentTab === 'config' ? 'flex flex-1' : 'hidden md:flex',
-        'flex-col h-full bg-slate-900/20 overflow-hidden transition-all duration-300'
+        'md:flex-1 flex-col h-full bg-slate-900/20 overflow-hidden transition-all duration-300'
       ]"
     >
       <!-- Topbar da Área de Configuração -->
@@ -158,7 +158,7 @@ const clearAll = () => {
       :class="[
         store.currentTab === 'yaml' ? 'flex flex-1' : 'hidden md:flex',
         isPreviewOpen ? 'w-full md:w-[420px] xl:w-[480px] opacity-100' : 'md:w-0 md:opacity-0 md:pointer-events-none md:border-l-0',
-        'md:shrink-0 md:border-l md:border-slate-800 transition-all duration-300 ease-in-out'
+        'md:flex-none md:shrink-0 md:border-l md:border-slate-800 transition-all duration-300 ease-in-out overflow-hidden'
       ]"
     />
 

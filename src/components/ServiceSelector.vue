@@ -1,7 +1,16 @@
 <script setup>
+import { onMounted } from 'vue'
 import { useDockerStore } from '@/stores/docker'
 
 const store = useDockerStore()
+
+onMounted(() => {
+  try {
+    (window.adsbygoogle = window.adsbygoogle || []).push({})
+  } catch (e) {
+    // Silencia erros em ambiente de desenvolvimento local
+  }
+})
 </script>
 
 <template>
@@ -87,20 +96,13 @@ const store = useDockerStore()
 
     <!-- Espaço AdSense Sidebar (Vertical/Quadrado) -->
     <div class="p-4 border-t border-slate-800/80 bg-slate-950/40 flex justify-center min-h-[266px]">
-      <div class="w-[248px] h-[248px] bg-slate-900/30 border border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center text-[10px] text-slate-500 font-mono p-4 text-center">
-        <span class="font-bold text-slate-400 mb-1">📢 ANÚNCIO (ADSENSE)</span>
-        <span class="text-[9px] text-slate-600">Bloco Responsivo / Quadrado</span>
-        <!-- 
+      <div class="w-[248px] h-[248px] bg-slate-900/30 border border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center text-[10px] text-slate-500 font-mono p-4 text-center overflow-hidden">
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"
+             data-ad-client="ca-pub-4947694760683886"
+             data-ad-slot="9876543210"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        -->
       </div>
     </div>
 

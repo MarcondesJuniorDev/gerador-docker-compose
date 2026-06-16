@@ -1,10 +1,19 @@
 <script setup>
+import { onMounted } from 'vue'
 import ServiceSelector from '@/components/ServiceSelector.vue'
 import ServiceCard from '@/components/ServiceCard.vue'
 import YamlPreview from '@/components/YamlPreview.vue'
 import { useDockerStore } from '@/stores/docker'
 
 const store = useDockerStore()
+
+onMounted(() => {
+  try {
+    (window.adsbygoogle = window.adsbygoogle || []).push({})
+  } catch (e) {
+    // Silencia erros em ambiente de desenvolvimento local
+  }
+})
 
 const clearAll = () => {
   if (confirm('Tem certeza que deseja limpar todos os serviços configurados?')) {
@@ -43,18 +52,11 @@ const clearAll = () => {
 
       <!-- Espaço AdSense Topo (Leaderboard 728x90 / Responsivo) -->
       <div class="w-full flex justify-center py-3 bg-slate-950/20 border-b border-slate-800/50 min-h-[116px] shrink-0">
-        <div class="w-[728px] h-[90px] bg-slate-900/30 border border-dashed border-slate-800 rounded-xl flex items-center justify-center text-[10px] text-slate-500 font-mono">
-          <span class="font-bold text-slate-400 mr-2">📢 ANÚNCIO (ADSENSE)</span>
-          <span class="text-[9px] text-slate-600">Leaderboard 728x90 / Responsivo</span>
-          <!-- 
+        <div class="w-[728px] h-[90px] bg-slate-900/30 border border-dashed border-slate-800 rounded-xl flex items-center justify-center text-[10px] text-slate-500 font-mono overflow-hidden">
           <ins class="adsbygoogle"
                style="display:inline-block;width:728px;height:90px"
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-               data-ad-slot="XXXXXXXXXX"></ins>
-          <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-          -->
+               data-ad-client="ca-pub-4947694760683886"
+               data-ad-slot="1234567890"></ins>
         </div>
       </div>
 
